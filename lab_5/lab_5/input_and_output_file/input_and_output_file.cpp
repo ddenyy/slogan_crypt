@@ -52,10 +52,17 @@ string input_secret_string() {
 принимает ссылку на частотный массив, размер частотного массива, алфавит
 */
 void output_five_most_rate_symbols(int* Array, int size_array, string Array_alphabet) {
+	for (int i = 0; i < size_array; i++) {
+		cout << Array[i] << " == " << Array_alphabet[i] << '\n';
+	}
+	cout << "== 5 maximum elements ==" << '\n';
 	for (int i = 0; i < 5; i++) {
 		//максимальный индекс
+		cout << '|';
 		int max_index = find_index_max(Array, size_array);
 		cout << Array_alphabet[max_index] << ' ';
 		Array[max_index] = -1;
 	}
+	cout << '|';
 }
+

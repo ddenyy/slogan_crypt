@@ -30,10 +30,12 @@ int main()
 
 
 	// 32 т.к в алфавите всего 32 буквы
-	const int size_rate = 32;
+	const int size_rate = 71;
+	string Array_alphabet_all_symbols = "абвгдежзийклмнопрстуфхцчшщъыьэюя ,.;!':АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
+	cout << Array_alphabet_all_symbols.size();
 	int* Array_rate = new int[size_rate];
-	create_rate_array(Array_rate, size_rate, ordinary_text, Array_alphabet);
-	output_five_most_rate_symbols(Array_rate, size_rate, Array_alphabet);
+	create_rate_array(Array_rate, size_rate, ordinary_text, Array_alphabet_all_symbols);
+	output_five_most_rate_symbols(Array_rate, size_rate, Array_alphabet_all_symbols);
 	delete[] Array_rate;
 }
 
